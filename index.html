@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        body {
+            font-family: Verdana, sans-serif;
+        }
+        .mySlides {
+            display: none
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            height: 13px;
+            width: 13px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+        @media only screen and (min-width: 340px) and (max-width: 767px) {
+            .text {
+                font-size: 11px
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll > 130) {
+                    $(".main2-thired").show();
+                } else {
+                    $(".main2-thired").hide();
+                }
+            });
+            $(".main2-thired").hide();
+            $(".main2-thired").click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+               <ul class="first-nav">
+                  <li><a href="https://www.facebook.com/" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="https://twitter.com"  target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="https://in.linkedin.com/"  target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                  <li><a href="https://in.pinterest.com/"  target="_blank" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                  <li><a href="https://plus.google.com/"  target="_blank" title="google-plus"><i class="fa fa-google-plus fa-1x"></i></a></li>
+               </ul>
+                <ul class="second-nav">
+                    <li>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>+91 9916144328</p>
+                    </li>
+                    <li><a href="#" class="em-sec" title="envelope"><i class="fa fa-envelope" aria-hidden="true"></i><span class="col-red email-link"><a href="mailto:manigandant5688@gmail.com">manigandant5688@gmail.com</a></span></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="thired-nav">
+            <div class="logo">
+                <h1><a href="#"><span class="f-1">M</span>ani</a></h1>
+            </div>
+            <ul>
+                <a href="index.html">
+                    <li class="active">Home</li>
+                </a>
+                <a href="service.html">
+                    <li>Services</li>
+                </a>
+                <a href="blog.html">
+                    <li>Blog</li>
+                </a>
+                <a href="portfolio.html">
+                    <li>Portfolio</li>
+                </a>
+                <a href="content.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="Images/slider/2.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="Images/slider/3.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="Images/slider/4.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="read-more">
+            <div class="first-read">
+                <h1> Quick Support</h1>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperia</p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="second-read">
+                <h1> Web Design</h1>
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperia</p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="thired-read">
+                <h1> Easy Customize</h1>
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperia</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+        <div class="customers">
+            <ul>
+                <li>
+                    <img src="Images/team/1.jpg" alt="">
+                    <h1> John Doe </h1>
+                    <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+                    <a href="#">Read more</a>
+                </li>
+                <li>
+                    <img src="Images/team/2.jpg" alt="">
+                    <h1> John Doe </h1>
+                    <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+                    <a href="#">Read more</a>
+                </li>
+                <li>
+                    <img src="Images/team/4.jpg" alt="">
+                    <h1> John Doe </h1>
+                    <p>Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+                    <a href="#">Read more</a>
+                </li>
+            </ul>
+        </div>
+        <div class="help">
+            <div class="container">
+                <h1>We can <span>help build your</span>project!</h1>
+                <p> Voluptatem accusantium doloremque laudantium sprea totam rem aperiam</p>
+                <a href="#">get it now</a>
+            </div>
+        </div>
+        <footer>
+            <div class="main1-fooder">
+                <div class="main1-first">
+                    <h1><a href="#"><span>D</span>ewi</a></h1>
+                    <p>
+                        We possess within us two minds. So far I have written only of the conscious mind. I would now like to introduce you to your second mind, the hidden and mysterious subconscious. Our subconscious mind contains such power.
+                    </p>
+                </div>
+                <div class="main1-second">
+                    <h1>Latest Posts</h1>
+                    <ul>
+                        <li><a href="#">This is awesome post title </a>
+                        </li>
+                        <li><a href="#"> Awesome features are awesome</a>
+                        </li>
+                        <li><a href="#">Create your own awesome website </a>
+                        </li>
+                        <li><a href="#">Wow, this is fourth post title </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main1-thired">
+                    <h1>Stay in touch</h1>
+                    <ul>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> manigandant5688@gmail.com </a>
+                        </li>
+                        <li> <i class="fa fa-phone" aria-hidden="true"></i> +91 9916144328</li>
+                        <li> <i class="fa fa-home" aria-hidden="true"></i> Dewi inc | PO Box 23456 Little Lonsdale St, New York </li>
+                        <li> Victoria 8011 USA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main2-footer">
+
+                <div class="main2-first">
+                    <ul>
+                        <li>&copy 2014 Dewi Multi-purpose theme |</li>
+                        <li><a href="#"> Bootstraptaste</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main2-second">
+                      <ul>
+                         <li ><a href="index.html">Home</a></li>
+                         <li ><a href="service.html">Services</a></li>
+                         <li ><a href="blog.html">Blog</a></li>
+                         <li ><a href="portfolio.html">Portfolio</a></li>
+                         <li ><a href="content.html">Contact</a></li>
+                      </ul>
+                </div>
+                <div class="main2-thired">
+                    <a href="index.html">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>
